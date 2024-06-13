@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button class="toggle-btn" onclick="toggleSidebar()">☰ Menu</button>
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">✖ Close</button>
+        <img src="logo.jpg" alt="Connectify Logo">
+        <h2>Connectify</h2>
+        <ul class="navbar">
+            <li><a href="#" style="color: white;">Home</a></li>
+            <li><a href="#" style="color: white;">Explore</a></li>
+            <li><a href="#" style="color: white;">Notification</a></li>
+            <li><a href="#" style="color: white;">Conversation</a></li>
+            <li><a href="#" style="color: white;">Profile</a></li>
+        </ul>
+        <ul class="sidebarlower">
+            <li><a href="#" class="settings">Settings</a> </li>
+            <button class="logout">logout</button>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="profile">
+                <img src="https://preview.redd.it/may-former-cherry-bullet-new-profile-photos-v0-vxtnlptx165d1.jpg?width=1080&crop=smart&auto=webp&s=6d868c9d1500331f59cb3db8131846cffa330860"
+                    alt="Profile Picture">
+                <h2>Albert Einstein</h2>
+                <p>378 Following | 372 Followers | 4 Posts</p>
+                <p>Theoretical physicist. E = mc^2. Passionate about understanding the universe.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quisquam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, deleniti.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, nulla.</p>
+
+            </div>
+            <div>
+                <h2> Highlights</h2>
+            </div>
+            <div class="stories">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.Js3-41xtOqJIpXV9hbOoAAHaHa&pid=Api&P=0&h=180"
+                    alt="Story 1">
+                <img src="https://tse1.explicit.bing.net/th?id=OIP.9kbuRMkSbGyl2w4QAkbpGAHaJE&pid=Api&P=0&h=180"
+                    alt="Story 2">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.GwjIHRktQkGGNxpDsHZgPQHaE7&pid=Api&P=0&h=180"
+                    alt="Story 3">
+            </div>
+            <div>
+                <h2> Posts</h2>
+            </div>
+            <div class="posts">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.KffYPbe5yh3fXGbrGMY27gHaEO&pid=Api&P=0&h=180" alt="Post 1">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.U0jepfI2xnjVrBZIfQ-DaQHaFe&pid=Api&P=0&h=180" alt="Post 2">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.9lp-AzhvWVzYdKMb9E8tLQHaHs&pid=Api&P=0&h=180" alt="Post 3">
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
