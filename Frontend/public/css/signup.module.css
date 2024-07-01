@@ -1,3 +1,18 @@
+body {
+  /* background-color: #000; Black background */
+  background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+  background-image : url("https://tse2.mm.bing.net/th?id=OIP.NbuBaaidg-zSWeRReKd6hwHaFj&pid=Api&P=0&h=180"); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff; /* White text */
+}
 .App {
   display: flex;
   justify-content: center;
