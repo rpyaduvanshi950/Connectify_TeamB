@@ -41,7 +41,23 @@ const Item = styled(Paper)(({ theme }) => ({
   }
 }));
 const drawerWidth = 240;
+let userProfile;
 function Profile(props) {
+  const [userInfo, setInfo] = React.useState({});
+  fetch("http://localhost:3000/user/profile",{
+    credentials:'include'
+  }) 
+  .then(res => res.json()) 
+  .then( 
+    (response) => { 
+      if(response.status==0){
+        window.location='/login';
+      }
+    }, 
+    (error) => { 
+      console.log(error);
+    } 
+  );
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
 const darkTheme = createTheme({
@@ -63,6 +79,24 @@ const darkTheme = createTheme({
       setMobileOpen(!mobileOpen);
     }
   };
+  const logger=(index) =>{
+    if(index==1){
+    var headers = {
+      "Content-Type": "application/json",                                                                                                
+    }   
+    fetch("http://localhost:3000/auth/logout", {
+        method: "GET",
+        credentials:'include',
+        headers: headers,
+    })
+    .then(function(response){ 
+        return response.json(); 
+    })
+    .then(function(data){ 
+        window.location='/';
+    });
+  }
+  }
   let iconsup=[<HomeIcon />,<AccountBoxIcon />,<SearchIcon />,<AddIcon />,<NotificationsIcon />,<ForumIcon />];
   let iconsdown=[<SettingsIcon />,<LogoutIcon />];
   const drawer = (
@@ -84,7 +118,7 @@ const darkTheme = createTheme({
       <List>
         {['Settings', 'Logout'].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={logger.bind(this,index)}>
               <ListItemIcon>
                 {iconsdown[index]}
               </ListItemIcon>
